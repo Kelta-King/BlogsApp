@@ -8,9 +8,11 @@
 <body>
     <h1>Article list</h1>
     <ul>
-        <li>article 1</li>
-        <li>article 2</li>
-        <li>article 3</li>
+        {% for article in articles %}
+
+            <a href="#"><li>{{article.title}}</li></a>
+
+        {% endfor %}
     </ul>
 </body>
 </html>
