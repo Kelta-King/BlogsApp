@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article list</title>
-</head>
-<body>
+{% extends 'commen.html' %}
+{% block content %}
     <h1>Article list</h1>
-    <ul>
+    <div>
         {% for article in articles %}
 
-            <a href="#"><li>{{article.title}}</li></a>
-
+        <h2><a href="#">{{article.title}}</a></h2>
+        <div>
+            {{article.snippenBody}}
+        </div>
+        <div>
+            {{article.date}}
+        </div>
         {% endfor %}
-    </ul>
-</body>
-</html>
+    </div>
+
+{% endblock %}
