@@ -1,0 +1,19 @@
+
+{% extends 'commen.html' %}
+
+{% block content %}
+    <div>
+
+        <div id='title'>
+            {{ article.title }}
+        </div>
+        
+        <p id='data'>
+            {{ article.body }}
+        </p>
+        <p id='date'>
+            {{ article.date }}
+        </p>
+
+    </div>
+{% endblock %}
