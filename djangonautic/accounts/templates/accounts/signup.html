@@ -2,8 +2,9 @@
 
 {% block content %}
 <div>
-    <form action="">
+    <form action="/accounts/signup" method="post">
         <table>
+        {% csrf_token %}
         {{ form }}
         </table>
         <input type="submit" value='signup'>
