@@ -2,13 +2,13 @@
 
 {% block content %}
 <div>
-    SignUp form
-    <form action="/accounts/signup" method="post">
+    Login form
+    <form action="{% url 'accounts:login' %}" method="post">
         <table>
         {% csrf_token %}
         {{ form }}
         </table>
-        <input type="submit" value='signup'>
+        <input type="submit" value='login'>
     </form>
 </div>
 {% endblock %}
